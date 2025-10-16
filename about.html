@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Alif</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR (samakan dengan selector .navbar di CSS) -->
+  <nav class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="about.html" class="active">ABOUT ME</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="portofolio.html">PORTOFOLIO</a>
+  </nav>
+
+  <!-- MAIN CONTENT (gunakan class .about sesuai CSS yang sudah dirapikan) -->
+  <main class="about">
+
+    <div class="about-content">
+      <img src="Pasfoto.jpg" alt="Foto Alif" class="about-img" />
+      <div class="about-text">
+        <p class="slide-up">
+          Nama saya Alif Rizky Ramadhan, lahir pada 9 Desember 2001 di Kota Cirebon.
+          Saya adalah lulusan terbaru dari Universitas Diponegoro dengan program studi Teknologi Rekayasa Otomasi. Saya tertarik pada
+          bidang IoT, SCADA, dan Automation System. Selain itu saya aktif di UKM Softball UNDIP dan kegiatan organisasi kampus.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Alif Rizky Ramadhan. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script kecil: aktifkan efek fade-in dan tampilkan gambar (class .show) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // aktifkan efek fade-in pada body (jika style.css punya body.fade-in)
+      document.body.classList.add('fade-in');
+
+      // tambahkan class show ke gambar about supaya transition berjalan sekali dan gambar tidak menghilang
+      const img = document.querySelector('.about-img');
+      if (img) {
+        // sedikit delay supaya browser sudah apply initial styles
+        setTimeout(() => img.classList.add('show'), 100);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Alif</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="contact.html" class="active">CONTACT</a>
+    <a href="portofolio.html">PORTOFOLIO</a>
+  </div>
+
+  <!-- CONTACT CONTENT -->
+  <section class="about fade-in">
+    <h2></h2>
+      <div class="contact">
+    <p><i class="fa-solid fa-envelope"></i> alifrzkyramadhan@gmail.com</p>
+    <p><i class="fa-brands fa-instagram"></i> @alifrizkyyy</p>
+    <p><i class="fa-solid fa-phone"></i> 085942966879</p>
+    <p><i class="fa-brands fa-linkedin"></i> Alif Rizky Ramadhan</p>
+  </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>&copy; 2025 Alif Rizky Ramadhan. All Rights Reserved.</p>
+  </div>
+
+  <script>
+  // Efek fade in saat halaman dimuat
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // Efek fade out sebelum pindah halaman
+  document.querySelectorAll("a").forEach(link => {
+    if (link.hostname === window.location.hostname) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        let targetUrl = this.href;
+        document.body.classList.remove("fade-in");
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 500); // delay biar animasi jalan dulu
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
+
