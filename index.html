@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Alif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  // Efek fade in saat halaman dimuat
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // Efek fade out sebelum pindah halaman
+  document.querySelectorAll("a").forEach(link => {
+    if (link.hostname === window.location.hostname) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        let targetUrl = this.href;
+        document.body.classList.remove("fade-in");
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 500); // delay biar animasi jalan dulu
+      });
+    }
+  });
+</script>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="portofolio.html">PORTOFOLIO</a>
+  </div>
+
+  <!-- HOME CONTENT -->
+  <section class="content">
+    <div class="content-left">
+      <img src="foto8.png" alt="Foto Profil">
+    </div>
+    <div class="content-right">
+      <h1 class="fade-in">Halo, Saya Alif</h1>
+      <p class="slide-up">
+        Saya adalah lulusan Teknologi Rekayasa Otomasi dari Universitas Diponegoro 2025.
+      </p>
+      <a href="about.html" class="btn">Tentang Saya</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Alif Rizky Ramadhan. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
